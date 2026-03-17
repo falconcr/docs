@@ -44,6 +44,17 @@ For more information, see [Go client reference](https://pkg.go.dev/github.com/mo
 
 For more information, see [Docker Engine Python SDK reference](https://docker-py.readthedocs.io/).
 
+> [!NOTE]
+> Docker Desktop for Linux users
+>
+> Docker Desktop for Linux uses a per-user socket instead of the system-wide `/var/run/docker.sock`. To use Docker SDKs with Docker Desktop for Linux, set the `DOCKER_HOST` environment variable:
+>
+> ```bash
+> export DOCKER_HOST=unix://$HOME/.docker/desktop/docker.sock
+> ```
+>
+> For more details, see [the Linux FAQs](/manuals/desktop/troubleshoot-and-support/faqs/linuxfaqs.md#how-do-i-use-docker-sdks-with-docker-desktop-for-linux).
+
 ## View the API reference
 
 You can
@@ -186,7 +197,7 @@ file them with the library maintainers.
 | Language | Library                                                                     |
 | :------- | :-------------------------------------------------------------------------- |
 | C        | [libdocker](https://github.com/danielsuo/libdocker)                         |
-| C#       | [Docker.DotNet](https://github.com/ahmetalpbalkan/Docker.DotNet)            |
+| C#       | [Docker.DotNet](https://github.com/testcontainers/Docker.DotNet)            |
 | C++      | [lasote/docker_client](https://github.com/lasote/docker_client)             |
 | Clojure  | [clj-docker-client](https://github.com/into-docker/clj-docker-client)       |
 | Clojure  | [contajners](https://github.com/lispyclouds/contajners)                     |

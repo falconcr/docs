@@ -13,10 +13,10 @@ Allow list:
   for: Administrators
 Amazon S3 cache:
   availability: Experimental
-Ask Gordon:
+Gordon:
   availability: Beta
-  requires: Docker Desktop [4.38.0](/manuals/desktop/release-notes.md#4380) or later
-Ask Gordon DHI migration:
+  requires: Docker Desktop [4.61.0](/manuals/desktop/release-notes.md#4610) or later
+Gordon DHI migration:
   availability: Experimental
   requires: Docker Desktop [4.38.0](/manuals/desktop/release-notes.md#4380) or later
 Automated builds:
@@ -68,7 +68,7 @@ Buildx no default:
   requires: Docker Buildx [0.10.4](https://github.com/docker/buildx/releases/tag/v0.10.4) and later
 Cache backend API:
   availability: Experimental
-cagent:
+Docker Agent:
   availability: Experimental
 Company:
   subscription: [Business]
@@ -169,8 +169,10 @@ Docker Desktop CLI logs:
   requires: Docker Desktop 4.39 and later
 Docker Desktop CLI kubernetes:
   requires: Docker Desktop 4.44 and later
+Docker Desktop CLI diagnose:
+  requires: Docker Desktop 4.60 and later
 Docker Hardened Images:
-  subscription: [Docker Hardened Images Enterprise]
+  subscription: [Docker Hardened Images Select or Enterprise]
 Docker Init:
   requires: Docker Desktop [4.27](/manuals/desktop/release-notes.md#4270) and later
 Docker Model Runner:
@@ -182,6 +184,9 @@ Docker MCP Catalog:
   availability: Beta
 Docker MCP Toolkit:
   availability: Beta
+MCP Profiles:
+  availability: Early Access
+  requires: Docker Desktop 4.63 and later
 Docker Pass:
   requires: Docker Desktop 4.54 and later
   availability: Beta
@@ -190,6 +195,9 @@ Docker Projects:
 Docker Sandboxes:
   availability: Experimental
   requires: Docker Desktop [4.58](/manuals/desktop/release-notes.md#4580) or later
+Docker Sandboxes v0.12:
+  availability: Experimental
+  requires: Docker Desktop [4.61](/manuals/desktop/release-notes.md#4610) or later
 Docker Scout exceptions:
   availability: Experimental
   requires: Docker Scout CLI [1.15.0](/manuals/scout/release-notes/cli.md#1150) and later
@@ -218,8 +226,14 @@ GitHub Actions cache:
 Hardened Docker Desktop:
   subscription: [Business]
   for: Administrators
+Disable public repositories:
+  subscription: [Business]
+  for: Administrators
 Image management:
   availability: Beta
+Namespace access:
+  subscription: [Business]
+  for: Administrators
 Immutable tags:
   availability: Beta
 Import builds:

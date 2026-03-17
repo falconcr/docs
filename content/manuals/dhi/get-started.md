@@ -11,12 +11,17 @@ This guide shows you how to go from zero to running a Docker Hardened Image
 Docker image to better understand the differences. While the steps use a
 specific image as an example, they can be applied to any DHI.
 
-> [!NOTE]
->
-> Docker Hardened Images are freely available to everyone with no subscription
-> required, no usage restrictions, and no vendor lock-in. You can upgrade to a
-> DHI Enterprise subscription when you require enterprise features like FIPS or
-> STIG compliance variants, customization capabilities, or SLA-backed support.
+
+Docker Hardened Images are freely available to everyone with no subscription
+required, no usage restrictions, and no vendor lock-in. This quickstart covers
+free DHI images pulled from `dhi.io`. If you have a paid DHI subscription or
+have started a trial and need compliance variants (FIPS), customization
+capabilities, or SLA-backed updates, you must [mirror DHI
+repositories](./how-to/mirror.md) to your organization's namespace on Docker
+Hub. You then pull mirrored images from `docker.io` (not `dhi.io`) using your
+organization's namespace path. For example, `docker pull
+docker.io/<yourorg>/dhi-python:3.13` instead of `docker pull
+dhi.io/python:3.13`.
 
 ## Step 1: Find an image to use
 
@@ -116,7 +121,7 @@ Example output:
 > This is example output. Your results may vary depending on newly discovered
 > CVEs and image updates.
 >
-> Docker maintains near-zero CVEs in Docker Hardened Images. For DHI Enterprise
+> Docker maintains near-zero CVEs in Docker Hardened Images. For paid DHI
 > subscriptions, when new CVEs are discovered, the CVEs are remediated within
 > the industry-leading SLA timeframe. Learn more about the [SLA-backed security
 > features](./features.md#sla-backed-security).
@@ -134,16 +139,16 @@ To dive deeper into comparing images see [Compare Docker Hardened Images](./how-
 You've pulled and run your first Docker Hardened Image. Here are a few ways to keep going:
 
 - [Migrate existing applications to DHIs](./migration/migrate-with-ai.md): Use
-  Docker's AI assistant to update your Dockerfiles to use Docker Hardened Images
+  Gordon to update your Dockerfiles to use Docker Hardened Images
   as the base.
 
 - [Start a trial](https://hub.docker.com/hardened-images/start-free-trial) to
-  explore the benefits of a DHI Enterprise subscription, such as access to FIPS
+  explore the benefits of a paid DHI subscription, such as access to FIPS
   and STIG variants, customized images, and SLA-backed updates.
 
-- [Mirror a repository](./how-to/mirror.md): After subscribing to DHI Enterprise
-  or starting a trial, learn how to mirror a DHI repository to enable
-  customization, access compliance variants, and get SLA-backed updates.
+- [Mirror a repository](./how-to/mirror.md): After subscribing to a paid DHI
+  subscription or starting a trial, learn how to mirror a DHI repository to
+  enable customization, access compliance variants, and get SLA-backed updates.
 
 - [Verify DHIs](./how-to/verify.md): Use tools like [Docker Scout](/scout/) or
   Cosign to inspect and verify signed attestations, like SBOMs and provenance.

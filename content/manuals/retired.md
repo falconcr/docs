@@ -8,6 +8,7 @@ params:
   sidebar:
     group: Products
 aliases:
+  - /docker-hub/service-accounts/
   - /cloud/
   - /cloud/aci-compose-features/
   - /cloud/aci-container-features/
@@ -124,9 +125,9 @@ Mirantis Kubernetes Engine or other products offered by Mirantis. Much of the
 technology and features found in Docker EE have been absorbed into the Mirantis
 product line.
 
-> [!NOTE]  
+> [!TIP]  
 > For information about enterprise-level features offered by Docker today,
-> see the [Docker Business subscription](https://www.docker.com/pricing/).
+> see the [Docker Business subscription](https://www.docker.com/pricing?ref=Docs&refAction=DocsRetired).
 
 ### Docker Data Center and Docker Trusted Registry
 
@@ -154,7 +155,19 @@ extension was available in early access on the GitHub Marketplace. GitHub
 [deprecated Copilot Extensions](https://github.blog/changelog/2025-09-24-deprecate-github-copilot-extensions-github-apps/)
 which led to the retirement of the Docker for GitHub Copilot extension. If
 you're looking for AI-assisted Docker workflows, explore the Docker MCP Toolkit
-and MCP Catalog, or use Ask Gordon in Docker Desktop and the Docker CLI.
+and MCP Catalog, or use Gordon in Docker Desktop and the Docker CLI.
+
+### Enhanced Service Account add-ons
+
+Enhanced Service Account add-ons provided tiered pull rate limits for automated
+workflows and service accounts accessing Docker Hub.
+
+Docker recommends transitioning to [Organization Access Tokens
+(OATs)](/manuals/enterprise/security/access-tokens.md), which provide secure,
+programmatic access to Docker Hub with granular repository permissions, token
+expiration, and better security auditing. OATs are included with Docker Team
+and Business subscriptions and offer similar functionality without requiring
+separate add-on purchases.
 
 ## Open source projects
 

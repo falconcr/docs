@@ -16,7 +16,7 @@ aliases:
 
 This page explains how to configure and use networking features, connect containers to host services, work behind proxies or VPNs, and troubleshoot common issues.
 
-For details on how Docker Desktop routes network traffic and file I/O between containers, the VM, and the host, see [Network overview](/manuals/desktop/features/networking/index.md#overview).
+For details on how Docker Desktop routes network traffic and file I/O between containers, the VM, and the host, see [Network overview](/manuals/desktop/features/networking/_index.md#overview).
 
 ## Core networking how-tos
 
@@ -73,11 +73,11 @@ $ docker run -d -P --name webserver nginx
 Alternatively, you can also use [host networking](/manuals/engine/network/drivers/host.md#docker-desktop)
 to give the container direct access to the network stack of the host.
 
-See the [run command](/reference/cli/docker/container/run.md) for more details on
+See the [run command](/reference/cli/docker/container/run/) for more details on
 publish options used with `docker run`.
 
 All inbound connections pass through the Docker Desktop backend process (`com.docker.backend` (Mac), `com.docker.backend` (Windows), or `qemu` (Linux), which handles port forwarding into the VM.
-For more details, see [How exposed ports work](/manuals/desktop/features/networking/index.md#how-exposed-ports-work)
+For more details, see [How exposed ports work](/manuals/desktop/features/networking/_index.md#how-exposed-ports-work)
 
 ### Working with VPNs
 
@@ -86,7 +86,7 @@ Docker Desktop networking can work when attached to a VPN.
 To do this, Docker Desktop intercepts traffic from the containers and injects it into
 the host as if it originated from the Docker application.
 
-For details about how this traffic appears to host firewalls and endpoint detection systems, see [Firewalls and endpoint visibility](/manuals/desktop/features/networking/index.md#firewalls-and-endpoint-visibility.md).
+For details about how this traffic appears to host firewalls and endpoint detection systems, see [Firewalls and endpoint visibility](/manuals/desktop/features/networking/_index.md#firewalls-and-endpoint-visibility).
 
 ### Working with proxies
 
@@ -102,7 +102,7 @@ For more details on proxies and proxy configurations, see the [Proxy settings do
 
 ## Network how-tos for Mac and Windows
 
-With Docker Desktop version 4.42 and later, you can control how Docker handles container networking and DNS resolution to better support a range of environments — from IPv4-only to dual-stack and IPv6-only systems. These settings help prevent timeouts and connectivity issues caused by incompatible or misconfigured host networks.
+You can control how Docker handles container networking and DNS resolution to better support a range of environments — from IPv4-only to dual-stack and IPv6-only systems. These settings help prevent timeouts and connectivity issues caused by incompatible or misconfigured host networks.
 
 You can set the following settings on the **Network** tab in the Docker Desktop Dashboard settings, or if you're an admin, with Settings Management via the [`admin-settings.json` file](/manuals/enterprise/security/hardened-desktop/settings-management/configure-json-file.md#networking), or the [Admin Console](/manuals/enterprise/security/hardened-desktop/settings-management/configure-admin-console.md)
 

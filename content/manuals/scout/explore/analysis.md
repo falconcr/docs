@@ -31,7 +31,7 @@ see [Integrating Docker Scout with other systems](/manuals/scout/integrations/_i
 
 Docker Personal comes with 1 Scout-enabled repository. You can upgrade your
 Docker subscription if you need additional repositories.
-See [Subscriptions and features](https://www.docker.com/pricing/)
+See [Subscriptions and features](https://www.docker.com/pricing?ref=Docs&refAction=DocsScoutAnalysis)
 to learn how many Scout-enabled
 repositories come with each subscription tier.
 
@@ -183,8 +183,8 @@ $ docker scout cves --format only-packages --only-vuln-packages \
 For more information about these commands and how to use them, refer to the CLI
 reference documentation:
 
-- [`docker scout quickview`](/reference/cli/docker/scout/quickview.md)
-- [`docker scout cves`](/reference/cli/docker/scout/cves.md)
+- [`docker scout quickview`](/reference/cli/docker/scout/quickview/)
+- [`docker scout cves`](/reference/cli/docker/scout/cves/)
 
 ## Vulnerability severity assessment
 

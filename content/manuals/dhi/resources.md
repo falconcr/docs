@@ -19,6 +19,7 @@ features, and announcements:
 
 | Date published | Title |
 |------|-------|
+| March 3, 2026 | [Announcing Docker Hardened System Packages](https://www.docker.com/blog/announcing-docker-hardened-system-packages/) |
 | January 25, 2026 | [Making the Most of Your Docker Hardened Images Enterprise Trial - Part 3](https://www.docker.com/blog/making-the-most-of-your-docker-hardened-images-enterprise-trial-part-3/) |
 | January 24, 2026 | [Making the Most of Your Docker Hardened Images Enterprise Trial - Part 2](https://www.docker.com/blog/making-the-most-of-your-docker-hardened-images-enterprise-trial-part-2/) |
 | December 19, 2025 | [Docker Hardened Images: Security Independently Validated by SRLabs](https://www.docker.com/blog/docker-hardened-images-security-independently-validated-by-srlabs/) |
@@ -54,20 +55,22 @@ organization:
   keys and verification tools
 - [Log](https://github.com/docker-hardened-images/log): Log of references (tag >
   digest) for Docker Hardened Images
+- [dhictl](https://github.com/docker-hardened-images/dhictl): Command-line
+  interface for managing and interacting with Docker Hardened Images
 - [Discussions](https://github.com/orgs/docker-hardened-images/discussions):
   Community forum and product discussions
 
 ## Additional resources
 
 - [Start a free trial](https://hub.docker.com/hardened-images/start-free-trial):
-  Explore DHI Enterprise features including FIPS/STIG variants, customization,
+  Explore DHI Select and Enterprise features including FIPS/STIG variants, customization,
   and SLA-backed support
 - [Request a demo](https://www.docker.com/products/hardened-images/#getstarted): Get a
-  personalized demo and information about DHI Enterprise subscriptions
+  personalized demo and information about DHI Select and Enterprise subscriptions
 - [Request an image](https://github.com/docker-hardened-images/catalog/issues):
   Submit a request for a specific Docker Hardened Image
 - [Contact Sales](https://www.docker.com/pricing/contact-sales/): Connect with
   Docker sales team for enterprise inquiries
 - [Docker Support](https://www.docker.com/support/): Access support resources
-  for DHI Enterprise customers
+  for DHI Select and Enterprise customers
 

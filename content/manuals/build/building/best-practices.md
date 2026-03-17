@@ -281,13 +281,13 @@ to create an efficient and maintainable Dockerfile.
 > [!TIP]
 >
 > To improve linting, code navigation, and vulnerability scanning of your Dockerfiles in Visual Studio Code
-> see [Docker VS Code Extension](https://marketplace.visualstudio.com/items?itemName=docker.docker).
+> see the [Docker DX](https://marketplace.visualstudio.com/items?itemName=docker.docker) extension.
 
 ### FROM
 
 Whenever possible, use current official images as the basis for your
 images. Docker recommends the [Alpine image](https://hub.docker.com/_/alpine/) as it
-is tightly controlled and small in size (currently under 6 MB), while still
+is tightly controlled and small in size (under 6 MB), while still
 being a full Linux distribution.
 
 For more information about the `FROM` instruction, see [Dockerfile reference for the FROM instruction](/reference/dockerfile.md#from).
@@ -631,7 +631,7 @@ as part of your build. `ADD` is better than manually adding files using
 something like `wget` and `tar`, because it ensures a more precise build cache.
 `ADD` also has built-in support for checksum validation of the remote
 resources, and a protocol for parsing branches, tags, and subdirectories from
-[Git URLs](/reference/cli/docker/buildx/build.md#git-repositories).
+[Git URLs](/reference/cli/docker/buildx/build/).
 
 The following example uses `ADD` to download a .NET installer. Combined with
 multi-stage builds, only the .NET runtime remains in the final stage, no

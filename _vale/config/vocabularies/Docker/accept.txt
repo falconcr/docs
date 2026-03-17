@@ -1,5 +1,7 @@
 (?i)[A-Z]{2,}'?s
 jq
+zstd
+Zstandard
 untracked
 ripgrep
 exfiltration
@@ -97,6 +99,7 @@ Google
 Grafana
 Gravatar
 gRPC
+Groq
 Grype
 HyperKit
 inferencing
@@ -115,6 +118,7 @@ JFrog
 JUnit
 Kata
 Kerberos
+Kiro
 Kitematic
 Kubeadm
 kubectl
@@ -174,12 +178,15 @@ Qualcomm
 Quickview
 rebalance
 reimplement
+reloader
 Rego
 Rekor
 ROCm
 rollback
 rootful
+rqt
 runc
+RViz
 Ryuk
 S3
 scrollable
@@ -196,6 +203,7 @@ stargz
 stdin
 stdout
 subfolder
+sudo
 subvolume
 Syft
 syntaxes
@@ -204,11 +212,13 @@ sysctl
 sysctls
 Sysdig
 systemd
+teleop
 Testcontainers
 tmpfs
 Traefik
 Trivy
 Trixie
+Turtlesim
 Ubuntu
 ufw
 umask
@@ -231,6 +241,7 @@ WireMock
 workdir
 WORKDIR
 Xdebug
+XQuartz
 youki
 Yubikey
 Zscaler
@@ -303,3 +314,5 @@ Zsh
 [Tt]oolsets?
 [Rr]erank(ing|ed)?
 [Ee]vals?
+[Ll]abspaces?
+[Uu]nsloth
