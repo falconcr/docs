@@ -14,7 +14,7 @@ params:
 
 # Integrating Gemini CLI with Grafana via Docker MCP Toolkit
 
-This guide outlines the process of connecting Gemini CLI to a Grafana instance using the **Docker MCP Toolkit**. By leveraging the Model Context Protocol (MCP), we enable natural language querying of observability data directly from the terminal.
+This guide shows how to connect Gemini CLI to a Grafana instance using the **Docker MCP Toolkit**.
 
 ## Prerequisites
 
@@ -25,12 +25,12 @@ This guide outlines the process of connecting Gemini CLI to a Grafana instance u
 
 ## 1. Provisioning Grafana Access
 
-The MCP server requires a **Service Account Token** to interact with the Grafana API. Using a personal API key is discouraged for security best practices.
+The MCP server requires a **Service Account Token** to interact with the Grafana API. Service Account Tokens are preferred over personal API keys because they can be revoked independently without affecting user access, and permissions can be scoped more narrowly.
 
 1. Navigate to **Administration > Users and access > Service accounts** in your Grafana dashboard.
 2. Create a new Service Account (e.g., `gemini-mcp-connector`).
 3. Assign the **Viewer** role (or **Editor** if you require alert management capabilities).
-4. Generate a new token. **Copy the token value immediately**; it will not be displayed again.
+4. Generate a new token. Copy the token immediately—you won't be able to view it again.
 
 ![Create a service account in Grafana](images/create-sa-grafana.webp)
 
@@ -38,7 +38,7 @@ The MCP server requires a **Service Account Token** to interact with the Grafana
 
 ## 2. MCP Server Configuration
 
-The Docker MCP Toolkit provides a pre-configured Grafana catalog item. This acts as the bridge between the LLM and the Grafana API.
+The Docker MCP Toolkit provides a pre-configured Grafana catalog item. This connects the LLM to the Grafana API.
 
 1. Open the **MCP Toolkit** in Docker Desktop.
 2. Locate **Grafana** in the Catalog and add it to your active servers.
@@ -110,7 +110,7 @@ Once the system identifies Loki as the active datasource, it translates the huma
 
 ![Gemini gets the Grafana's logs from MCP docker](images/mcp-docker-grafana-loki-2.webp)
 
-In the final step, Gemini performs reasoning over the raw data. It filters through hundreds of lines of telemetry to confirm that Nginx logs exist, but it goes beyond the original prompt by identifying a critical anomaly. It flags a `node_filesystem_device_error`, alerting the DevOps engineer to a potential hardware or volume mounting issue on the edge node. The process concludes by turning a simple question into an actionable incident report.
+In the final step, Gemini performs reasoning over the raw telemetry. After filtering through hundreds of lines to confirm the existence of Nginx logs, Gemini extracts a specific node_filesystem_device_error buried within the stream. By surfacing this critical event, it alerts the DevOps engineer to a volume mounting issue on the edge node, transforming raw data into an actionable incident report.
 
 ![Gemini gives an overall about the findings](images/mcp-docker-grafana-loki-3.webp)
 
@@ -154,4 +154,4 @@ Take the next step:
 
 - Optimize your queries: Experiment with advanced LogQL prompts to create automated health reports.
 
-Need help setting up your Docker MCP environment or customizing your Gemini prompts? Let's know.
+Need help setting up your Docker MCP environment or customizing your Gemini prompts? Visit the [Docker Community Forums](https://forums.docker.com) or see the [MCP Troubleshooting Guide](https://docs.docker.com/guides/grafana-mcp-server-gemini).
