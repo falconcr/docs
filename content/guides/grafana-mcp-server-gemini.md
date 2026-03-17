@@ -101,7 +101,7 @@ _List all Prometheus and Loki datasources._
 
 ### Logs Inspection
 
-The sequence initiates with the User Prompt: "I would like to filter logs based on the device_name=edge-device-01 label. Are there logs about nginx in the last 5 minutes?". At this stage, the Gemini model performs intent parsing. It identifies the specific metadata required—a label (device_name) and a keyword (nginx)—and realizes it needs external data to fulfill the request. This triggers the list_datasources tool through the MCP Server to locate the telemetry backend.
+Gemini performs intent parsing and translates the request into a LogQL query: `{device_name="edge-device-01"} |= "nginx"`. This query targets specific logs, extracting raw OpenTelemetry (OTel) data that includes container metadata and system labels, which Gemini then uses to identify the source of the issue.
 
 ![Filter logs based on loki labels](images/mcp-docker-grafana-loki-1.webp)
 
@@ -138,20 +138,11 @@ Imagine you get a page that an application is slow. You could:
    4. Use query_loki_logs to search for "error" or "timeout" messages during the time of the spike.
    5. If you find the root cause, use create_incident to start the formal response and add_activity_to_incident to log your findings.
 
-## Next steps?
+## Next steps
 
-This use case demonstrates the future of Operational Intelligence: moving away from manual dashboard hunting and complex query syntax toward a conversational, proactive troubleshooting experience.
-
-By bridging the gap between your terminal and Grafana's telemetry via the Docker MCP Toolkit, you empower your DevOps team to detect silent failures—like the filesystem error identified in our example—before they escalate into full-scale outages.
-
-Don't let critical logs get buried under layers of infrastructure noise. Start automating your incident response and log analysis today.
-
-Take the next step:
-
-- Deploy the connector: Follow the 15-minute guide above to link your local Gemini CLI to your production Grafana instance.
-
-- Scale the solution: Explore how to share these MCP configurations across your SRE team for unified troubleshooting.
-
-- Optimize your queries: Experiment with advanced LogQL prompts to create automated health reports.
+- Learn about [Advanced LogQL queries](https://grafana.com/docs/loki/latest/query/log_queries/)
+- Set up [Team-wide MCP configurations](https://modelcontextprotocol.io/docs/develop/connect-local-servers)
+- Explore [Grafana alerting with MCP](https://github.com/grafana/mcp-grafana)
+- Get help in the [Docker Community Forums](https://forums.docker.com)
 
 Need help setting up your Docker MCP environment or customizing your Gemini prompts? Visit the [Docker Community Forums](https://forums.docker.com) or see the [MCP Troubleshooting Guide](https://docs.docker.com/guides/grafana-mcp-server-gemini).
